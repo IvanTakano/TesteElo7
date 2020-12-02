@@ -5,18 +5,18 @@
  */
 package testeelo7;
 
+
+
 /**
  *
  * @author Ivan
  */
-public class Mapa {    
+public class Sonda {
 
-    public static String [][] matriz (String x, String y){
-       
+    public static void sonda(String x, String y, String z, String[][] Matriz) {
         int xConv = Integer.parseInt(x);
         int yConv = Integer.parseInt(y);
-        String[][] matriz = new String[xConv+1][yConv+1];
-        return matriz;
-    }    
-    
+        Matriz[xConv][yConv] = "n";
+    }
 }
+
