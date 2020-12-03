@@ -5,16 +5,24 @@
  */
 package testeelo7;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Ivan
  */
 public class Mapa {    
 
-    public static String [][] matriz (String x, String y){
+    public static String [][] matriz (){
+        
+        Scanner entrada = new Scanner(System.in);
+        
        
-        int xConv = Integer.parseInt(x);
-        int yConv = Integer.parseInt(y);
+        System.out.println("Digite as coordenadas do ponto superior-direito de Marte: ");
+        String trans = entrada.nextLine();
+        String[] coordenadas = trans.split(" ");        
+        int xConv = Integer.parseInt(coordenadas[0]);        
+        int yConv = Integer.parseInt(coordenadas[1]);                 
         String[][] matriz = new String[xConv+1][yConv+1];
         return matriz;
     }    

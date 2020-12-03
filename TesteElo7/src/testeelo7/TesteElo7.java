@@ -8,7 +8,11 @@ package testeelo7;
 
 import java.util.Scanner;
 import static testeelo7.Mapa.matriz;
+import static testeelo7.Sonda.sondaCoordenadas;
+import static testeelo7.Contoles.contoles;
 import static testeelo7.Sonda.sonda;
+
+
 
 /**
  *
@@ -19,17 +23,28 @@ public class TesteElo7 {
    
     public static void main(String[] args) {
         
-        Scanner entrada = new Scanner(System.in);        
+        Scanner entrada = new Scanner(System.in); 
+       
+        String[] sonda1 = sonda();
+        String[] sonda2 = sonda();
+       
+        String[][] marte = matriz(); 
         
-        System.out.println("Digite as coordenadas do ponto superior-direito de Marte: ");
-        String[] coordenadasMarte = entrada.next().split(" ");
-        String [][] marte = matriz(coordenadasMarte[0], coordenadasMarte[1]);
+        String[] coordenadas = sondaCoordenadas(marte);         
+        sonda1 = contoles(coordenadas, marte);
+        System.out.print("\nSonda2 \n");
+        coordenadas = sondaCoordenadas(marte);
+        sonda2 = contoles(coordenadas, marte);
         
-        System.out.println("Digite as coordenadas atuais da sonda: ");
-        String[] coordenadasSonda = entrada.next().split(" ");        
-        sonda(coordenadasSonda[0], coordenadasSonda[1], coordenadasSonda[3], marte);
         
-        System.out.println("Digite as coordenadas de movimentos da sonda: ");
-        String movimentos = entrada.next();
+        System.out.println("Sonda 1: ");
+        for (int i = 0; i < sonda1.length; i++) {
+            System.out.print(sonda1[i] + " ");            
+        }   
+        System.out.println("\n\nSonda 2: ");
+        for (int i = 0; i < sonda2.length; i++) {
+            System.out.print(sonda2[i] + " ");            
+        }   
+        System.out.println("");           
     }   
 }

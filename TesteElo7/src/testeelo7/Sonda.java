@@ -5,6 +5,8 @@
  */
 package testeelo7;
 
+import java.util.Scanner;
+
 
 
 /**
@@ -12,11 +14,31 @@ package testeelo7;
  * @author Ivan
  */
 public class Sonda {
-
-    public static void sonda(String x, String y, String z, String[][] Matriz) {
-        int xConv = Integer.parseInt(x);
-        int yConv = Integer.parseInt(y);
-        Matriz[xConv][yConv] = "n";
+    
+    public static String[] sonda(){
+        String[] sonda = new String[3];
+        return sonda;
     }
+      
+     
+    public static String[] sondaCoordenadas(String[][] Matriz) {
+        
+        Scanner entrada = new Scanner(System.in);  
+        
+        System.out.println("Digite as coordenadas atuais da sonda: ");
+        String[] coordenadasSonda = entrada.nextLine().split(" "); 
+        return coordenadasSonda;
+    }
+    
+    public static void movimentos(){
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.println("Digite as coordenadas de movimentos da sonda: ");
+        String movimentos = entrada.next();       
+        
+    }
+    
+    
+    
 }
 
