@@ -22,7 +22,7 @@ public class TesteElo7 {
         Sonda sonda2 = new Sonda("sonda2", marte.getAmbiente());  
         sonda2.setCoordenadas(sonda2.getCoordenadas(), marte.getAmbiente());
         
-        System.out.print("Coordenadas atuais da " +sonda1.getNome()+ ": ");
+        System.out.print("\nCoordenadas atuais da " +sonda1.getNome()+ ": ");
         for (int i = 0; i < sonda1.getCoordenadas().length; i++) {
             System.out.print(sonda1.getCoordenadas()[i] + " ");
         }

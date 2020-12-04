@@ -30,7 +30,7 @@ public class Sonda {
         
         Scanner entrada = new Scanner(System.in);  
         
-        System.out.println("Digite as coordenadas atuais da " + nome + ": ");
+        System.out.println("\nDigite as coordenadas atuais da " + nome + ": ");
         String[] coordenadasSonda = entrada.nextLine().split(" "); 
         return coordenadasSonda;
     }

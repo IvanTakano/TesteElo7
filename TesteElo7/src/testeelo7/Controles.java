@@ -21,7 +21,7 @@ public class Controles {
         int yConv = Integer.parseInt(coordenadaSondas[1]);        
         String z = coordenadaSondas[2].toUpperCase().trim();
 
-        System.out.println("Entre com os comandos para a sonda: \n"
+        System.out.println("\nEntre com os comandos para a sonda: \n"
                 + "L para virar a esquerda;\n"
                 + "R para virar a direita;\n"
                 + "M mover para frente;");
