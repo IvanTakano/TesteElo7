@@ -13,6 +13,12 @@ import java.util.Scanner;
  */
 public class Mapa {    
 
+    private String[][] ambiente;
+    
+    public Mapa(){
+        ambiente = matriz();
+    }
+    
     public static String [][] matriz (){
         
         Scanner entrada = new Scanner(System.in);
@@ -25,6 +31,20 @@ public class Mapa {
         int yConv = Integer.parseInt(coordenadas[1]);                 
         String[][] matriz = new String[xConv+1][yConv+1];
         return matriz;
-    }    
+    }
+
+    /**
+     * @return the ambiente
+     */
+    public String[][] getAmbiente() {
+        return ambiente;
+    }
+
+    /**
+     * @param ambiente the ambiente to set
+     */
+    public void setAmbiente(String[][] ambiente) {
+        this.ambiente = ambiente;
+    }
     
 }

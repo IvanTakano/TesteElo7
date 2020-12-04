@@ -6,14 +6,6 @@
 package testeelo7;
 
 
-import java.util.Scanner;
-import static testeelo7.Mapa.matriz;
-import static testeelo7.Sonda.sondaCoordenadas;
-import static testeelo7.Contoles.contoles;
-import static testeelo7.Sonda.sonda;
-
-
-
 /**
  *
  * @author Ivan
@@ -22,34 +14,21 @@ public class TesteElo7 {
 
    
     public static void main(String[] args) {
+        // TODO code application logic here
+        Mapa marte = new Mapa();
+        Sonda sonda1 = new Sonda(marte.getAmbiente());
+        sonda1.setCoordenadas(sonda1.getCoordenadas(), marte.getAmbiente());
         
-        Scanner entrada = new Scanner(System.in); 
-       
-        String[] sonda1 = sonda();
-        String[] sonda2 = sonda();
-        // auxiliar para daber posição de outra sonda
-        int iniX = 0; 
-        int iniY = 0;        
-       
-        String[][] marte = matriz(); 
+        Sonda sonda2 = new Sonda(marte.getAmbiente());  
+        sonda2.setCoordenadas(sonda2.getCoordenadas(), marte.getAmbiente());
         
-        String[] coordenadas = sondaCoordenadas(marte);         
-        sonda1 = contoles(coordenadas, marte, iniX, iniY);
-        System.out.print("\nSonda2 \n");
-        iniX = Integer.parseInt(sonda1[0]);
-        iniY = Integer.parseInt(sonda1[1]);
-        coordenadas = sondaCoordenadas(marte);
-        sonda2 = contoles(coordenadas, marte, iniX, iniY);
+        for (int i = 0; i < sonda1.getCoordenadas().length; i++) {
+            System.out.print(sonda1.getCoordenadas()[i] + " ");
+        }
+        System.out.println("");
         
-        
-        System.out.println("Posição atual da sonda 1: ");
-        for (String sonda11 : sonda1) {
-            System.out.print(sonda11 + " ");
-        }   
-        System.out.println("\n\nPosição atual da sonda 2: ");
-        for (String sonda21 : sonda2) {
-            System.out.print(sonda21 + " ");
-        }   
-        System.out.println("");           
-    }   
+        for (int i = 0; i < sonda2.getCoordenadas().length; i++) {
+            System.out.print(sonda2.getCoordenadas()[i] + " ");
+        }
+    }
 }

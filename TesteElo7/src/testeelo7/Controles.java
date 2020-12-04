@@ -11,10 +11,10 @@ import java.util.Scanner;
  * Classe para comandos da sonda
  * @author Ivan
  */
-public class Contoles {
+public class Controles {
   
      
-    public static String[] contoles(String[] coordenadaSondas, String[][] matriz, int sondaX, int sondaY) {
+    public static String[] controles(String[] coordenadaSondas, String[][] matriz) {
         
         Scanner entrada = new Scanner(System.in);
         int xConv = Integer.parseInt(coordenadaSondas[0]);
@@ -30,10 +30,7 @@ public class Contoles {
         
         for (int i = 0; i < movimento.length; i++) {
             
-            // Conferir se não possui outra sonda no local
-            if(xConv == sondaX && yConv == sondaY){
-                System.out.println("Alerta de colisão no comando de posição: " + (i+1));
-            }
+            
             
             // Virar a esqueda
             if(movimento[i] == 'L'){
