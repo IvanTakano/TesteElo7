@@ -19,6 +19,7 @@ public class Mapa {
         ambiente = matriz();
     }
     
+    // Método para inicializar o tamanho da matriz
     public static String [][] matriz (){
         
         Scanner entrada = new Scanner(System.in);

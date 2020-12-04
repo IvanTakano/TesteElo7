@@ -11,24 +11,26 @@ import static testeelo7.Controles.controles;
 
 
 /**
- * 
+ * Classe para criarmos a Sonda e sua localização inicial.
  * @author Ivan
  */
 public class Sonda {
-   private String nome;
+    private String nome;
     private String[] coordenadas;
     
-    public Sonda(String[][] mapa){
+    
+    public Sonda(String nome, String[][] mapa){
+        
         this.nome = nome;
         this.coordenadas = sondaCoordenadas(mapa);
     }
     
     // Posição inicial da sonda 
-    public static String[] sondaCoordenadas(String[][] Matriz) {
+    public String[] sondaCoordenadas(String[][] Matriz) {
         
         Scanner entrada = new Scanner(System.in);  
         
-        System.out.println("Digite as coordenadas atuais da sonda: ");
+        System.out.println("Digite as coordenadas atuais da " + nome + ": ");
         String[] coordenadasSonda = entrada.nextLine().split(" "); 
         return coordenadasSonda;
     }
@@ -60,11 +62,6 @@ public class Sonda {
     public void setCoordenadas(String[] coordenadas, String[][] matriz) {
         coordenadas = controles(coordenadas, matriz);
         this.coordenadas = coordenadas;
-    }
-
-    void imprimir(String[] coordenadas) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+    }   
 }
 

@@ -26,6 +26,7 @@ public class Controles {
                 + "R para virar a direita;\n"
                 + "M mover para frente;");
         String comando = entrada.next();
+        // recebendo os comandos, quebrando em char e colocando os valores em uma array com tratamento de minúsculode para maiúsculo se necessário.
         char[] movimento = comando.toUpperCase().trim().toCharArray();
         
         for (int i = 0; i < movimento.length; i++) {
