@@ -8,7 +8,7 @@ package testeelo7;
 import java.util.Scanner;
 
 /**
- *
+ * Classe para cria a dimensão do ambiente
  * @author Ivan
  */
 public class Mapa {    

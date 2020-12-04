@@ -10,17 +10,17 @@ import java.util.Scanner;
 
 
 /**
- *
+ * 
  * @author Ivan
  */
 public class Sonda {
-    
+    // Criar uma sonda
     public static String[] sonda(){
         String[] sonda = new String[3];
         return sonda;
     }
       
-     
+    // Posição inicial da sonda 
     public static String[] sondaCoordenadas(String[][] Matriz) {
         
         Scanner entrada = new Scanner(System.in);  
@@ -28,17 +28,7 @@ public class Sonda {
         System.out.println("Digite as coordenadas atuais da sonda: ");
         String[] coordenadasSonda = entrada.nextLine().split(" "); 
         return coordenadasSonda;
-    }
-    
-    public static void movimentos(){
-        Scanner entrada = new Scanner(System.in);
-        
-        System.out.println("Digite as coordenadas de movimentos da sonda: ");
-        String movimentos = entrada.next();       
-        
-    }
-    
-    
+    } 
     
 }
 

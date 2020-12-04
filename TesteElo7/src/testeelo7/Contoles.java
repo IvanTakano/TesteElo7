@@ -8,7 +8,7 @@ package testeelo7;
 import java.util.Scanner;
 
 /**
- *
+ * Classe para comandos da sonda
  * @author Ivan
  */
 public class Contoles {
@@ -27,12 +27,15 @@ public class Contoles {
                 + "M mover para frente;");
         String comando = entrada.next();
         char[] movimento = comando.toUpperCase().trim().toCharArray();
+        
         for (int i = 0; i < movimento.length; i++) {
+            
+            // Conferir se não possui outra sonda no local
             if(xConv == sondaX && yConv == sondaY){
                 System.out.println("Alerta de colisão no comando de posição: " + (i+1));
             }
             
-        
+            // Virar a esqueda
             if(movimento[i] == 'L'){
                 
                 switch (z){
@@ -51,6 +54,7 @@ public class Contoles {
                 }
             }
             else
+            // Virar a direita    
             if(movimento[i] == 'R'){
                 
                 switch (z){
@@ -69,7 +73,7 @@ public class Contoles {
                 }
             }
             else
-                
+            // Ir para frente    
             if(movimento[i] == 'M'){
                 switch (z){
                     case "N":
@@ -104,7 +108,7 @@ public class Contoles {
                 
             }
         }
-        
+        // Passando valores de inteiro para String
         String[] controle = new String[3];
         controle[0] = Integer.toString(xConv);
         controle[1] = Integer.toString(yConv);

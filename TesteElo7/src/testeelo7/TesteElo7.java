@@ -27,7 +27,8 @@ public class TesteElo7 {
        
         String[] sonda1 = sonda();
         String[] sonda2 = sonda();
-        int iniX = 0;
+        // auxiliar para daber posição de outra sonda
+        int iniX = 0; 
         int iniY = 0;        
        
         String[][] marte = matriz(); 
