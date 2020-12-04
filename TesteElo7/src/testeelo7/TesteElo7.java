@@ -27,23 +27,27 @@ public class TesteElo7 {
        
         String[] sonda1 = sonda();
         String[] sonda2 = sonda();
+        int iniX = 0;
+        int iniY = 0;        
        
         String[][] marte = matriz(); 
         
         String[] coordenadas = sondaCoordenadas(marte);         
-        sonda1 = contoles(coordenadas, marte);
+        sonda1 = contoles(coordenadas, marte, iniX, iniY);
         System.out.print("\nSonda2 \n");
+        iniX = Integer.parseInt(sonda1[0]);
+        iniY = Integer.parseInt(sonda1[1]);
         coordenadas = sondaCoordenadas(marte);
-        sonda2 = contoles(coordenadas, marte);
+        sonda2 = contoles(coordenadas, marte, iniX, iniY);
         
         
-        System.out.println("Sonda 1: ");
-        for (int i = 0; i < sonda1.length; i++) {
-            System.out.print(sonda1[i] + " ");            
+        System.out.println("Posição atual da sonda 1: ");
+        for (String sonda11 : sonda1) {
+            System.out.print(sonda11 + " ");
         }   
-        System.out.println("\n\nSonda 2: ");
-        for (int i = 0; i < sonda2.length; i++) {
-            System.out.print(sonda2[i] + " ");            
+        System.out.println("\n\nPosição atual da sonda 2: ");
+        for (String sonda21 : sonda2) {
+            System.out.print(sonda21 + " ");
         }   
         System.out.println("");           
     }   
